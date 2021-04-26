@@ -1,4 +1,4 @@
-<h1>Tablas de multiplicar <small>*</small></h1>
+<h1>Tablas de multiplicar</h1>
 <hr>
 <div class="card-columns">
 
@@ -12,14 +12,10 @@
           </div>
           <div class="card-footer">
             <small class="text-muted">{{tablas.aparicion}}</small>
-
-
            <button type="button" class="btn btn-outline-primary btn-block">
                 Ver mas..
             </button>
-          
-
-            <a routerLink="" class="btn btn-outline-primary">Ver mas link...</a>
+            <a *ngIf="i==0" [routerLink]="['/tabla-cero']" class="btn btn-outline-primary">Ver mas link...</a>
           </div>
         </div>
       </div>

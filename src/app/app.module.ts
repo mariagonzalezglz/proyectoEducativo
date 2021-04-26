@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { OperacionesComponent } from './components/operaciones/operaciones.component';
 import { PlanoComponent } from './components/plano/plano.component';
 import { TablasComponent } from './components/tablas/tablas.component';
+import { TablaCeroComponent } from './components/tabla-cero/tabla-cero.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TablasComponent } from './components/tablas/tablas.component';
     HeaderComponent,
     OperacionesComponent,
     PlanoComponent,
-    TablasComponent
+    TablasComponent,
+    TablaCeroComponent
   ],
   imports: [
     BrowserModule,

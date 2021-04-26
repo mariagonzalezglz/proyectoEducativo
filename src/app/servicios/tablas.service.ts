@@ -21,6 +21,7 @@ export class TablasService{
           img: "assets/img/batman.png",
           aparicion: "1939-05-01",
           casa:"DC"
+
         },
         {
           nombre: "Tabla del 3",
@@ -35,6 +36,7 @@ export class TablasService{
           img: "assets/img/hulk.png",
           aparicion: "1962-05-01",
           casa:"Marvel"
+
         },
         {
           nombre: "Tabla del 5",
@@ -42,6 +44,7 @@ export class TablasService{
           img: "assets/img/linterna-verde.png",
           aparicion: "1940-06-01",
           casa: "DC"
+
         },
         {
           nombre: "Tabla del 6",
@@ -49,6 +52,7 @@ export class TablasService{
           img: "assets/img/spiderman.png",
           aparicion: "1962-08-01",
           casa: "Marvel"
+
         },
         {
           nombre: "Tabla del 7",
@@ -56,6 +60,7 @@ export class TablasService{
           img: "assets/img/wolverine.png",
           aparicion: "1974-11-01",
           casa: "Marvel"
+
         },
         {
             nombre: "Tabla del 8",
@@ -63,6 +68,7 @@ export class TablasService{
             img: "assets/img/wolverine.png",
             aparicion: "1974-11-01",
             casa: "Marvel"
+
           },
           {
             nombre: "Tabla del 9",
@@ -70,6 +76,7 @@ export class TablasService{
             img: "assets/img/wolverine.png",
             aparicion: "1974-11-01",
             casa: "Marvel"
+
           }
           
       ];
