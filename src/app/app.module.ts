@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 //Servicios
 import {TablasService} from './servicios/tablas.service';
-
 import { APP_ROUTE } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
