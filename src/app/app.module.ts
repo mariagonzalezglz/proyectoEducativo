@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { OperacionesComponent } from './components/operaciones/operaciones.component';
+import { PlanoComponent } from './components/plano/plano.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { HeaderComponent } from './components/shared/header/header.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    OperacionesComponent,
+    PlanoComponent
   ],
   imports: [
     BrowserModule,
