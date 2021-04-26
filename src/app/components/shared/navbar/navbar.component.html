@@ -1,13 +1,16 @@
 
-<nav class="navbar navbar-expand-lg navbar-ligth" style="background-color: #e3f2fd;">
-    <div>
+
+
+<nav class="navbar navbar-expand-lg navbar-ligth " style="background-color: #e3f2fd;">
+  <div class="collapse navbar-collapse justify-content-center">
+
       <ul class="nav">
         <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
         </li>
 
-        <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fa fa-table" aria-hidden="true"></i>
+        <li class="nav-item active" outerLinkActive="active">
+            <a class="nav-link" [routerLink]="['tablas']"><i class="fa fa-table" aria-hidden="true"></i>
                 Tablas de multiplicar</a>
           </li>
 

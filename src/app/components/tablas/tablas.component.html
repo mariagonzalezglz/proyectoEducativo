@@ -1,0 +1,26 @@
+<h1>Tablas de multiplicar <small>*</small></h1>
+<hr>
+<div class="card-columns">
+
+    <div class="card animated fadeIn fast" *ngFor="let tabla of tablas; let i=index">
+        <div class="card h-100">
+          <img [src]="tablas.img" class="card-img-top" [alt]="tablas.nombre">
+          <div class="card-body">
+            <h5 class="card-title">{{tablas.nombre}}</h5>
+            <p class="card-text">{{tablas.bio}}</p>
+            
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{tablas.aparicion}}</small>
+
+
+           <button type="button" class="btn btn-outline-primary btn-block">
+                Ver mas..
+            </button>
+          
+
+            <a routerLink="" class="btn btn-outline-primary">Ver mas link...</a>
+          </div>
+        </div>
+      </div>
+</div>

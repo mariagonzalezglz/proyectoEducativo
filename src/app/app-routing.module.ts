@@ -10,9 +10,16 @@ const routes: Routes = [
   {path: 'operaciones-basicas', component: OperacionesComponent},
   {path: 'plano-cartesiano', component: PlanoComponent},
 ];
+//import { RouterModule,Routes } from '@angular/router';
+import {HomeComponent} from './components/home/home.component';
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+import {TablasComponent} from './components/tablas/tablas.component';
+
+
+const APP_ROUTING: Routes=[
+{path: 'home', component: HomeComponent},
+{path: 'tablas',component: TablasComponent},
+{path: '**',pathMatch: 'full',redirectTo: 'home'}
+];
+
+export const APP_ROUTE=RouterModule.forRoot(APP_ROUTING,{useHash:true});
