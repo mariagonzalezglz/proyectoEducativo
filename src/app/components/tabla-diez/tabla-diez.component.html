@@ -1,0 +1,123 @@
+
+<h2>Tabla de multiplicar del 10</h2>
+
+<body class="m-0 vh-100 row justify-content-center aling-items-center">
+  <div *ngFor="let x of tablaDiez; let i=index">
+    <ul class="list-group list-group-horizontal" *ngIf="x > 1 && i > 1">
+
+      <li class="list-group-item">{{i}} X 10 = {{x}}</li>
+      <li class="list-group-item">10 X {{i}} = {{x}}</li>
+
+      <!--20-->
+      <li class="list-group-item" *ngIf="x==20">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/2.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--30-->
+      <li class="list-group-item" *ngIf="x==30">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/3.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--40-->
+      <li class="list-group-item" *ngIf="x==40">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/4.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--50-->
+      <li class="list-group-item" *ngIf="x==50">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/5.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/5.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--60-->
+      <li class="list-group-item" *ngIf="x==60">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/6.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/6.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--70-->
+      <li class="list-group-item" *ngIf="x==70">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/7.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/7.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--80-->
+      <li class="list-group-item" *ngIf="x==80">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/8.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/8.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==90">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/9.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/9.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <li class="list-group-item" *ngIf="x==100">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <img width="50px" src="assets/img/0.png">
+
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 1 && i > 1">
+      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del 10 x {{i}}</li>
+    </ul>
+  </div>
+</body>

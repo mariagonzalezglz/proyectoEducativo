@@ -1,0 +1,99 @@
+
+<h2>Tabla de multiplicar del 4</h2>
+
+<body class="m-0 vh-100 row justify-content-center aling-items-center">
+  <div *ngFor="let x of tablaCuatro; let i=index">
+    <ul class="list-group list-group-horizontal" *ngIf="x > 4 && i > 4">
+
+      <li class="list-group-item">{{i}} X 4 = {{x}}</li>
+      <li class="list-group-item">4 X {{i}} = {{x}}</li>
+
+      <!-- 
+      <li class="list-group-item" *ngIf="x<10">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/2.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/{{x}}.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==10">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/2.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>-->
+      
+      <!--20-->
+      <li class="list-group-item" *ngIf="x==20">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+
+      
+      <!--24-->
+      <li class="list-group-item" *ngIf="x==24">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/4.png">
+      </li>
+
+      
+      <!--28-->
+      <li class="list-group-item" *ngIf="x==28">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/8.png">
+      </li>
+
+      
+      <!--32-->
+      <li class="list-group-item" *ngIf="x==32">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/3.png">
+        <img width="50px" src="assets/img/2.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==36">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/3.png">
+        <img width="50px" src="assets/img/6.png">
+      </li>
+
+      
+      <!--32-->
+      <li class="list-group-item" *ngIf="x==40">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/4.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/4.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 4 && i > 4">
+      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del 4 x {{i}}</li>
+    </ul>
+  </div>
+  </body>
+  

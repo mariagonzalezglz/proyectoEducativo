@@ -1,0 +1,48 @@
+
+<h2>Tabla de multiplicar del 7</h2>
+
+<body class="m-0 vh-100 row justify-content-center aling-items-center">
+  <div *ngFor="let x of tablaSiete; let i=index">
+    <ul class="list-group list-group-horizontal" *ngIf="x > 7 && i > 7">
+
+      <li class="list-group-item">{{i}} X 7 = {{x}}</li>
+      <li class="list-group-item">7 X {{i}} = {{x}}</li>
+
+      
+      <!--56-->
+      <li class="list-group-item" *ngIf="x==56">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/7.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/5.png">
+        <img width="50px" src="assets/img/6.png">
+      </li>
+
+      
+      <!--48-->
+      <li class="list-group-item" *ngIf="x==63">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/7.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/6.png">
+        <img width="50px" src="assets/img/3.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==70">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/7.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/7.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 7 && i > 7">
+      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del 7 x {{i}}</li>
+    </ul>
+  </div>
+  </body>

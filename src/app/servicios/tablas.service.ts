@@ -77,6 +77,14 @@ export class TablasService{
             aparicion: "1974-11-01",
             casa: "Marvel"
 
+          },
+          {
+            nombre: "Tabla del 10",
+            bio:"Tabla del 10",
+            img: "assets/img/10.png",
+            aparicion: "1974-11-01",
+            casa: "Marvel"
+
           }
           
       ];
@@ -120,3 +128,5 @@ export interface Tablas{
     aparicion:string;
     casa:string;
   }
+
+ 
