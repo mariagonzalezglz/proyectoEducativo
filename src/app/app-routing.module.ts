@@ -7,7 +7,8 @@ import { PlanoComponent } from './components/plano/plano.component';
 import {HomeComponent} from './components/home/home.component';
 import {TablasComponent} from './components/tablas/tablas.component';
 import {TablaCeroComponent} from './components/tabla-cero/tabla-cero.component';
-
+import {TablaUnoComponent} from './components/tabla-uno/tabla-uno.component';
+import {TablaDosComponent} from './components/tabla-dos/tabla-dos.component';
 
 
 const APP_ROUTING: Routes=[
@@ -16,6 +17,9 @@ const APP_ROUTING: Routes=[
   {path: 'home', component: HomeComponent},
   {path: 'tablas',component: TablasComponent},
   {path: 'tabla-cero',component: TablaCeroComponent},
+  {path: 'tabla-uno',component: TablaUnoComponent},
+  {path: 'tabla-dos',component: TablaDosComponent},
+
   {path: '**',pathMatch: 'full',redirectTo: 'home'}];
 
 export const APP_ROUTE=RouterModule.forRoot(APP_ROUTING,{useHash:true});

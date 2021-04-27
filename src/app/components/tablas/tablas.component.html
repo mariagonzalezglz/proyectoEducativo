@@ -12,10 +12,9 @@
           </div>
           <div class="card-footer">
             <small class="text-muted">{{tablas.aparicion}}</small>
-           <button type="button" class="btn btn-outline-primary btn-block">
-                Ver mas..
-            </button>
             <a *ngIf="i==0" [routerLink]="['/tabla-cero']" class="btn btn-outline-primary">Ver mas link...</a>
+            <a *ngIf="i==1" [routerLink]="['/tabla-uno']" class="btn btn-outline-primary">Ver mas link...</a>
+            <a *ngIf="i==2" [routerLink]="['/tabla-dos']" class="btn btn-outline-primary">Ver mas link...</a>
           </div>
         </div>
       </div>

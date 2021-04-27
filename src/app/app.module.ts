@@ -12,6 +12,8 @@ import { OperacionesComponent } from './components/operaciones/operaciones.compo
 import { PlanoComponent } from './components/plano/plano.component';
 import { TablasComponent } from './components/tablas/tablas.component';
 import { TablaCeroComponent } from './components/tabla-cero/tabla-cero.component';
+import { TablaUnoComponent } from './components/tabla-uno/tabla-uno.component';
+import { TablaDosComponent } from './components/tabla-dos/tabla-dos.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { TablaCeroComponent } from './components/tabla-cero/tabla-cero.component
     OperacionesComponent,
     PlanoComponent,
     TablasComponent,
-    TablaCeroComponent
+    TablaCeroComponent,
+    TablaUnoComponent,
+    TablaDosComponent
   ],
   imports: [
     BrowserModule,

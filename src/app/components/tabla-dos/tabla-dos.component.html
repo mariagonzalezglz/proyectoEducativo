@@ -1,0 +1,32 @@
+
+<h2>Tabla de multiplicar del 2</h2>
+
+  <div *ngFor="let x of tablaDos; let i=index">
+    <ul class="list-group list-group-horizontal" *ngIf="x > 2 && i > 2">
+
+      <li class="list-group-item">{{i}} X 2 = {{x}}</li>
+      <li class="list-group-item">2 X {{i}} = {{x}}</li>
+
+      <li class="list-group-item" *ngIf="x!=10">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/1.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/{{x}}.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==10">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/1.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 2 && i > 2">
+      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del {{x}} x 1</li>
+    </ul>
+  </div>
