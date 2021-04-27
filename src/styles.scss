@@ -3,6 +3,14 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+#mycontainer {
+    max-width: 1050px !important;
+}
+.bmi {         /*my additional class name -for card*/
+    margin-left: 18%;      
+    margin-right: 18%;
+    width: auto;
+}
 h1 {
     display: inline-block;
     color: #000;

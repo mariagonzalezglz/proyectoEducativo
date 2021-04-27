@@ -5,20 +5,20 @@ export class TablasService{
       {
         nombre: "Tabla del 0",
         bio:"Tabla del 0",
-        img: "assets/img/aquaman.png",
+        img: "assets/img/0.png",
         aparicion: "1941-11-01",
         casa:"DC"
       }, {
         nombre: "Tabla del 1",
         bio:"Tabla del 1",
-        img: "assets/img/aquaman.png",
+        img: "assets/img/1.png",
         aparicion: "1941-11-01",
         casa:"DC"
       },
         {
           nombre: "Tabla del 2",
           bio:"Tabla del 2",
-          img: "assets/img/batman.png",
+          img: "assets/img/2.png",
           aparicion: "1939-05-01",
           casa:"DC"
 
@@ -26,14 +26,14 @@ export class TablasService{
         {
           nombre: "Tabla del 3",
           bio:"Tabla del 3",
-          img: "assets/img/daredevil.png",
+          img: "assets/img/3.png",
           aparicion: "1964-01-01",
           casa: "Marvel"
         },
         {
           nombre: "Tabla del 4",
           bio:"Tabla del 4",
-          img: "assets/img/hulk.png",
+          img: "assets/img/4.png",
           aparicion: "1962-05-01",
           casa:"Marvel"
 
@@ -41,7 +41,7 @@ export class TablasService{
         {
           nombre: "Tabla del 5",
           bio:"Tabla del 5",
-          img: "assets/img/linterna-verde.png",
+          img: "assets/img/5.png",
           aparicion: "1940-06-01",
           casa: "DC"
 
@@ -49,7 +49,7 @@ export class TablasService{
         {
           nombre: "Tabla del 6",
           bio:"Tabla del 6",
-          img: "assets/img/spiderman.png",
+          img: "assets/img/6.png",
           aparicion: "1962-08-01",
           casa: "Marvel"
 
@@ -57,7 +57,7 @@ export class TablasService{
         {
           nombre: "Tabla del 7",
           bio:"Tabla del 7",
-          img: "assets/img/wolverine.png",
+          img: "assets/img/7.png",
           aparicion: "1974-11-01",
           casa: "Marvel"
 
@@ -65,7 +65,7 @@ export class TablasService{
         {
             nombre: "Tabla del 8",
             bio:"Tabla del 8",
-            img: "assets/img/wolverine.png",
+            img: "assets/img/8.png",
             aparicion: "1974-11-01",
             casa: "Marvel"
 
@@ -73,7 +73,7 @@ export class TablasService{
           {
             nombre: "Tabla del 9",
             bio:"Tabla del 9",
-            img: "assets/img/wolverine.png",
+            img: "assets/img/9.png",
             aparicion: "1974-11-01",
             casa: "Marvel"
 
@@ -87,7 +87,9 @@ export class TablasService{
     //hacer un servicio publico para ontener datos de arriba
 
     getTablas():Tablas[]{
+      console.log(this.tablas);
         return this.tablas;
+       
     }
 
     getTabla(idx:string){
