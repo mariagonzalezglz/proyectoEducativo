@@ -1,0 +1,106 @@
+
+<h2>Tabla de multiplicar del 3</h2>
+
+<body class="m-0 vh-100 row justify-content-center aling-items-center">
+  <div *ngFor="let x of tablaTres; let i=index">
+    <ul class="list-group list-group-horizontal" *ngIf="x > 3 && i > 3">
+
+      <li class="list-group-item">{{i}} X 3 = {{x}}</li>
+      <li class="list-group-item">3 X {{i}} = {{x}}</li>
+
+      <!-- 
+      <li class="list-group-item" *ngIf="x<10">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/2.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/{{x}}.png">
+      </li>
+
+      <li class="list-group-item" *ngIf="x==10">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/2.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>-->
+
+      <!--12-->
+      <li class="list-group-item" *ngIf="x==12">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/2.png">
+      </li>
+      <!--15-->
+      <li class="list-group-item" *ngIf="x==15">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/5.png">
+      </li>
+      <!--18-->
+      <li class="list-group-item" *ngIf="x==18">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/8.png">
+      </li>
+      
+      <!--21-->
+      <li class="list-group-item" *ngIf="x==21">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/1.png">
+      </li>
+
+      
+      <!--24-->
+      <li class="list-group-item" *ngIf="x==24">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/4.png">
+      </li>
+
+      
+      <!--27-->
+      <li class="list-group-item" *ngIf="x==27">
+        <img width="50px" src="assets/img/{{i}}.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/2.png">
+        <img width="50px" src="assets/img/7.png">
+      </li>
+
+      
+      <!--30-->
+      <li class="list-group-item" *ngIf="x==30">
+        <img width="50px" src="assets/img/1.png">
+        <img width="50px" src="assets/img/0.png">
+        <label>X</label>
+        <img width="50px" src="assets/img/3.png"> 
+        <label>=</label>
+        <img width="50px" src="assets/img/3.png">
+        <img width="50px" src="assets/img/0.png">
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 3 && i > 3">
+      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del 3 x {{i}}</li>
+    </ul>
+  </div>
+  </body>

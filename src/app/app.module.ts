@@ -14,6 +14,14 @@ import { TablasComponent } from './components/tablas/tablas.component';
 import { TablaCeroComponent } from './components/tabla-cero/tabla-cero.component';
 import { TablaUnoComponent } from './components/tabla-uno/tabla-uno.component';
 import { TablaDosComponent } from './components/tabla-dos/tabla-dos.component';
+import { TablaTresComponent } from './components/tabla-tres/tabla-tres.component';
+import { TablaCuatroComponent } from './components/tabla-cuatro/tabla-cuatro.component';
+import { TablaCincoComponent } from './components/tabla-cinco/tabla-cinco.component';
+import { TablaSeisComponent } from './components/tabla-seis/tabla-seis.component';
+import { TablaSieteComponent } from './components/tabla-siete/tabla-siete.component';
+import { TablaOchoComponent } from './components/tabla-ocho/tabla-ocho.component';
+import { TablaNueveComponent } from './components/tabla-nueve/tabla-nueve.component';
+import { TablaDiezComponent } from './components/tabla-diez/tabla-diez.component';
 
 
 @NgModule({
@@ -27,7 +35,15 @@ import { TablaDosComponent } from './components/tabla-dos/tabla-dos.component';
     TablasComponent,
     TablaCeroComponent,
     TablaUnoComponent,
-    TablaDosComponent
+    TablaDosComponent,
+    TablaTresComponent,
+    TablaCuatroComponent,
+    TablaCincoComponent,
+    TablaSeisComponent,
+    TablaSieteComponent,
+    TablaOchoComponent,
+    TablaNueveComponent,
+    TablaDiezComponent
   ],
   imports: [
     BrowserModule,

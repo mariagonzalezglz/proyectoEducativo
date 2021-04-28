@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TablasMul } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-tabla-dos',
@@ -14,9 +15,14 @@ export class TablaDosComponent implements OnInit {
   ngOnInit(): void {
     for (let i = 0; i < 11; i++) 
     {
+     /* let valores={
+        var resul=2*i;
+        'resultado':2*i,
+         'img': resul/2
+      }*/
          this.tablaDos[i]=2*i;
     }
-    console.log(this.tablaDos);
   }
 
 }
+
