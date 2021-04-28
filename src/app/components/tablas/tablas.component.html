@@ -5,10 +5,8 @@
     <div class="card animated fadeIn fast"  *ngFor="let tabla of tablas; let i=index">
         <div class="card h-100" >
           <img [src]="tabla.img" class="card-img-top" [alt]="tablas.nombre">
-          <div class="card-body" style="background-color:#c96291;">
+          <div class="card-body" style="background-color:#AD1457; color: white;">
             <h5 class="card-title">{{tabla.nombre}}</h5>
-            <p class="card-text">{{tabla.bio}}</p>
-            
           </div>
           <div class="card-footer">
             <small class="text-muted">{{tablas.aparicion}}</small>
