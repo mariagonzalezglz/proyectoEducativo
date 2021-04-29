@@ -7,15 +7,22 @@
           <a class="nav-link" href="#" style="font-size: large; background-color:#E36B2C; color: cornsilk;"><strong><i class="fa fa-home" aria-hidden="true"></i> Home</strong> </a>
         </li>
 
-        <li class="nav-item active" outerLinkActive="active">
-            <a class="nav-link" [routerLink]="['tablas']" style="font-size: large; background-color: #6DC36D; color: cornsilk;"><strong><i class="fa fa-table" aria-hidden="true"></i>
+        <li class="nav-item dropdown">
+            <a class="nav-link active" [routerLink]="['tablas']" style="font-size: large; background-color: #6DC36D; color: cornsilk;"><strong><i class="fa fa-table" aria-hidden="true"></i>
               Tablas de multiplicar</strong> </a>
           </li>
 
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/operaciones-basicas']" style="font-size: large; background-color:#00CCCC; color: cornsilk;"><strong><i class="fa fa-calculator" aria-hidden="true"></i>
-              Operaciones básicas</strong> </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"  style="font-size: large; background-color:#00CCCC; color: cornsilk;"><strong><i class="fa fa-calculator" aria-hidden="true"></i>
+              Operaciones</strong></a>
+
+              <div class="dropdown-menu">
+                <a style="font-size: large; background-color:deeppink; color: cornsilk;" class="dropdown-item" [routerLink]="['/operaciones-basicas']"><strong>Multiplicación</strong> </a>
+                <div class="dropdown-divider" style="font-size: large; background-color:#00CCCC; color: cornsilk;"></div>
+                <a style="font-size: large; background-color:deeppink; color: cornsilk;" class="dropdown-item" [routerLink]="['/divisiones']"><strong>División</strong> </a>
+              </div>
           </li>
+
           <li class="nav-item active">
             <a class="nav-link" [routerLink]="['/plano-cartesiano']" style="font-size: large; background-color: #9999FF; color: cornsilk;"><strong><i class="fa fa-plus" aria-hidden="true"></i> Plano cartesiano</strong> </a>
           </li>
@@ -23,3 +30,4 @@
     </div>
   </nav>
 
+  

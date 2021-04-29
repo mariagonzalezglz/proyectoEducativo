@@ -17,6 +17,8 @@ import {TablaSieteComponent} from './components/tabla-siete/tabla-siete.componen
 import {TablaOchoComponent} from './components/tabla-ocho/tabla-ocho.component';
 import {TablaNueveComponent} from './components/tabla-nueve/tabla-nueve.component';
 import {TablaDiezComponent} from './components/tabla-diez/tabla-diez.component';
+import {DivisionesComponent} from './components/divisiones/divisiones.component';
+
 
 
 
@@ -36,6 +38,7 @@ const APP_ROUTING: Routes=[
   {path: 'tabla-ocho',component: TablaOchoComponent},
   {path: 'tabla-nueve',component: TablaNueveComponent},
   {path: 'tabla-diez',component: TablaDiezComponent},
+  {path: 'divisiones',component: DivisionesComponent},
 
   {path: '**',pathMatch: 'full',redirectTo: 'home'}];
 

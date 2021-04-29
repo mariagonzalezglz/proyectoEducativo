@@ -22,6 +22,7 @@ import { TablaSieteComponent } from './components/tabla-siete/tabla-siete.compon
 import { TablaOchoComponent } from './components/tabla-ocho/tabla-ocho.component';
 import { TablaNueveComponent } from './components/tabla-nueve/tabla-nueve.component';
 import { TablaDiezComponent } from './components/tabla-diez/tabla-diez.component';
+import { DivisionesComponent } from './components/divisiones/divisiones.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { TablaDiezComponent } from './components/tabla-diez/tabla-diez.component
     TablaSieteComponent,
     TablaOchoComponent,
     TablaNueveComponent,
-    TablaDiezComponent
+    TablaDiezComponent,
+    DivisionesComponent
   ],
   imports: [
     BrowserModule,
