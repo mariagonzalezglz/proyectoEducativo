@@ -2,29 +2,67 @@
 
 <h2>Tabla de multiplicar del 0</h2>
 <br><br>
-<body class="m-0 vh-100 row justify-content-center aling-items-center">
-  <div *ngFor="let x of tablaCero" class="justify-content-center">
-    <ul class="list-group list-group-horizontal" >
-      <li class="list-group-item">{{x}} X 0 = 0</li>
-      <li class="list-group-item">0 X {{x}} = 0</li>
-      <li class="list-group-item" *ngIf="x!=10">
-        <img width="50px" src="assets/img/{{x}}.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/0.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/0.png">
-      </li>
-      <li class="list-group-item" *ngIf="x==10">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/0.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/0.png">
-      </li>
-    </ul>
-    <ul class="list-group list-group-horizontal-xl">
-      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del {{x}} x 0</li>
-    </ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6" >
+        <body class="justify-content-center aling-items-center" *ngIf="this.tablas">
+          <div *ngFor="let x of tablaCero" class="justify-content-center">
+            <ul class="list-group list-group-horizontal" >
+              <li class="list-group-item">{{x}} X 0 = 0</li>
+              <li class="list-group-item">0 X {{x}} = 0</li>
+              <li class="list-group-item" *ngIf="x!=10">
+                <img width="50px" src="assets/img/{{x}}.png">
+                <label>X</label>
+                <img width="50px" src="assets/img/0.png"> 
+                <label>=</label>
+                <img width="50px" src="assets/img/0.png">
+              </li>
+              <li class="list-group-item" *ngIf="x==10">
+                <img width="50px" src="assets/img/1.png">
+                <img width="50px" src="assets/img/0.png">
+                <label>X</label>
+                <img width="50px" src="assets/img/0.png"> 
+                <label>=</label>
+                <img width="50px" src="assets/img/0.png">
+              </li>
+            </ul>
+        </div>
+        </body>
+    </div>
+    <div class="col-6" >
+      <button type="button" (click)="practicar()" class="btn btn-primary btn-lg btn-block">Practicar</button>
+      <div class="row" *ngIf="this.btnPracticar"> 
+          Instrucciones
+      </div>
+      <div class="row" *ngIf="this.btnPracticar"> 
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>tabla</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let x of tablaCero" >
+            <tr>
+              <td>0 X {{x}}</td>
+            </tr>
+            <tr>
+          </tbody>
+        </table>
+          
+      </div>
+      <div class="row" *ngIf="this.btnPracticar"> 
+        <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+        </div>
+        
+          
+      </div>
+
+    </div>
+  </div>
 </div>
-</body>
+
+
+
