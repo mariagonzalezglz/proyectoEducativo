@@ -6,6 +6,16 @@
 #mycontainer {
     max-width: 1050px !important;
 }
+
+.carousel-inner img {
+    width: 20%;
+    height: 10%;
+    max-height: 250px;
+}
+
+.carousel-inner{
+ height: 250px;
+}
 .bmi {         /*my additional class name -for card*/
     margin-left: 18%;      
     margin-right: 18%;
