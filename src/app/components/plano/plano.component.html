@@ -4,7 +4,7 @@
 
 <div id="instructions">
 	<video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px" controls preload="none"
-		poster='http://video-js.zencoder.com/oceans-clip.jpg'
+
 		data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
 		<source src="assets/video/plano.mp4" type='video/mp4' />
 	</video>
@@ -15,21 +15,27 @@
 
 
   <!--Cuadricula de plano-->
-  <div>
-<div class="row">
+
+<div class="row" *ngFor="let plano of planos; let i=index">
     <div class="col-sm-6" style="padding-top: 200px;">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Coordenadas</h5>
+            <h5 class="card-title">{{plano.nombre}}</h5>
+            <a class="card-title">Ubica en el siguiente plano cartesiano la imagen mostrada
+              y coloca en el siguiente recuadro las coordenados donde se localiza, da clic en el boton
+              "Validar" para revisar tu respuesta.
+            </a>
+            
+            <input class="form-control" type="text" placeholder="Respuesta">
+            <button type="button" class="btn btn-primary mb-2">Validar</button>
           </div>
         </div>
       </div>
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-            <img src="assets/img/plano.png" class="card-img-top" alt="...">
+            <img src={{plano.planoimg}} class="card-img-top" [alt]="plano.planoimg">
         </div>
       </div>
     </div>
   </div>
-</div>
