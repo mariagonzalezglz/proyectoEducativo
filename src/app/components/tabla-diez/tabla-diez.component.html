@@ -2,123 +2,240 @@
 <h2>Tabla de multiplicar del 10</h2>
 <br><br>
 
-<body class="m-0 vh-100 row justify-content-center aling-items-center">
-  <div *ngFor="let x of tablaDiez; let i=index">
-    <ul class="list-group list-group-horizontal" *ngIf="x > 1 && i > 1">
-
-      <li class="list-group-item">{{i}} X 10 = {{x}}</li>
-      <li class="list-group-item">10 X {{i}} = {{x}}</li>
-
-      <!--20-->
-      <li class="list-group-item" *ngIf="x==20">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/2.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/2.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+<div class="row">
+    <div class="col-7" *ngIf="this.tablas">
+      <body class="justify-content-center aling-items-center">
+        <div *ngFor="let x of tablaDiez; let i=index">
+          <ul class="list-group list-group-horizontal" *ngIf="x > 1 && i > 1">
       
-      <!--30-->
-      <li class="list-group-item" *ngIf="x==30">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/3.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/3.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            <li class="list-group-item">{{i}} X 10 = {{x}}</li>
+            <li class="list-group-item">10 X {{i}} = {{x}}</li>
       
-      <!--40-->
-      <li class="list-group-item" *ngIf="x==40">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/4.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/4.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            <!--20-->
+            <li class="list-group-item" *ngIf="x==20">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/2.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/2.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
       
-      <!--50-->
-      <li class="list-group-item" *ngIf="x==50">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/5.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/5.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            
+            <!--30-->
+            <li class="list-group-item" *ngIf="x==30">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/3.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/3.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
       
-      <!--60-->
-      <li class="list-group-item" *ngIf="x==60">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/6.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/6.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            
+            <!--40-->
+            <li class="list-group-item" *ngIf="x==40">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/4.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/4.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
       
-      <!--70-->
-      <li class="list-group-item" *ngIf="x==70">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/7.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/7.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            
+            <!--50-->
+            <li class="list-group-item" *ngIf="x==50">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/5.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/5.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
       
-      <!--80-->
-      <li class="list-group-item" *ngIf="x==80">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/8.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/8.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
-      <li class="list-group-item" *ngIf="x==90">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/9.png"> 
-        <label>=</label>
-        <img width="50px" src="assets/img/9.png">
-        <img width="50px" src="assets/img/0.png">
-      </li>
-
+            
+            <!--60-->
+            <li class="list-group-item" *ngIf="x==60">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/6.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/6.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
       
-      <li class="list-group-item" *ngIf="x==100">
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>X</label>
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <label>=</label>
-        <img width="50px" src="assets/img/1.png">
-        <img width="50px" src="assets/img/0.png">
-        <img width="50px" src="assets/img/0.png">
+            
+            <!--70-->
+            <li class="list-group-item" *ngIf="x==70">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/7.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/7.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
+      
+            
+            <!--80-->
+            <li class="list-group-item" *ngIf="x==80">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/8.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/8.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
+      
+            <li class="list-group-item" *ngIf="x==90">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/9.png"> 
+              <label>=</label>
+              <img width="50px" src="assets/img/9.png">
+              <img width="50px" src="assets/img/0.png">
+            </li>
+      
+            
+            <li class="list-group-item" *ngIf="x==100">
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>X</label>
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <label>=</label>
+              <img width="50px" src="assets/img/1.png">
+              <img width="50px" src="assets/img/0.png">
+              <img width="50px" src="assets/img/0.png">
+      
+            </li>
+          </ul>
+        </div>
+      </body>
+    </div>
 
-      </li>
-    </ul>
 
-    <ul class="list-group list-group-horizontal-xl" *ngIf="x > 1 && i > 1">
-      <li class="list-group-item" style="border-color: black;"><i class="fa fa-book" aria-hidden="true"></i> Historia del 10 x {{i}}</li>
-    </ul>
+    <div class="col-5">
+      <button type="button" *ngIf="!this.btnPracticar" (click)="practicar()" class="btn btn-primary btn-lg btn-block"><strong> <i class="fa fa-cogs" aria-hidden="true"></i> Practicar</strong> </button>
+      <button type="button" *ngIf="this.btnPracticar" (click)="recordar()" class="btn btn-lg btn-block" style="background-color:deeppink; color: cornsilk;"><strong><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</strong></button>
+      <br>
+      <div class="row" *ngIf="this.btnPracticar"> 
+        <span class="badge badge-pill badge-warning" style="font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">¡Es hora de poner a prueba tu conocimiento!
+          Elige de la columna derecha, la opcion que consideres correcta.
+        </span>
+      </div>
+      <br>
+    <div class="row" *ngIf="this.btnPracticar"> 
+      <table class="table table-bordered table-warning">
+        <thead>
+        </thead>
+        <tbody *ngFor="let x of tablaResultados; let i=index">
+          <tr *ngIf="i>0">
+            <td>10 X {{i}} = </td>
+            <td *ngIf="i==1" >
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+            </td>
+            <td *ngIf="i==2">
+              <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+            <td *ngIf="i==3">
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+            <td *ngIf="i==4">
+              <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+            <td *ngIf="i==5">
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              <button style="border-radius: 50%;"(click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+            </td>
+            <td *ngIf="i==6">
+              <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+            <td *ngIf="i==7">
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+            <td *ngIf="i==8">
+              <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+            </td>
+            <td *ngIf="i==9">
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+            </td>
+            <td *ngIf="i==10">
+              <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+              <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+            </td>
+
+            <!--Columna de resultados-->
+            <td *ngIf="i==1">
+              <label *ngIf="this.Bien1"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal1"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==2">
+              <label *ngIf="this.Bien2"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal2"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==3">
+              <label *ngIf="this.Bien3"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal3"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==4">
+              <label *ngIf="this.Bien4"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal4"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==5">
+              <label *ngIf="this.Bien5"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal5"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==6">
+              <label *ngIf="this.Bien6"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal6"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==7">
+              <label *ngIf="this.Bien7"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal7"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==8">
+              <label *ngIf="this.Bien8"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal8"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==9">
+              <label *ngIf="this.Bien9"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal9"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+            <td *ngIf="i==10">
+              <label *ngIf="this.Bien10"><i class="fa fa-check" aria-hidden="true"></i></label>
+              <label *ngIf="this.Mal10"><i class="fa fa-times" aria-hidden="true"></i></label>
+            </td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
   </div>
-</body>
+</div>
+

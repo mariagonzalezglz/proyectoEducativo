@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-6" >
+    <div class="col-7" *ngIf="this.tablas">
         <body class="justify-content-center aling-items-center" *ngIf="this.tablas">
           <div *ngFor="let x of tablaCero" class="justify-content-center">
             <ul class="list-group list-group-horizontal" >
@@ -30,22 +30,117 @@
         </div>
         </body>
     </div>
-    <div class="col-6" >
-      <button type="button" (click)="practicar()" class="btn btn-primary btn-lg btn-block">Practicar</button>
+
+    <div class="col-5" >
+      <button type="button" *ngIf="!this.btnPracticar" (click)="practicar()" class="btn btn-primary btn-lg btn-block"><strong> <i class="fa fa-cogs" aria-hidden="true"></i> Practicar</strong> </button>
+      <button type="button" *ngIf="this.btnPracticar" (click)="recordar()" class="btn btn-lg btn-block" style="background-color:deeppink; color: cornsilk;"><strong> <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</strong></button>
+
+      <br>
       <div class="row" *ngIf="this.btnPracticar"> 
-          Instrucciones
+        <span class="badge badge-pill badge-warning" style="font-size: 20px;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">¡Es hora de poner a prueba tu conocimiento!
+          Elige de la columna derecha, la opcion que consideres correcta.
+        </span>
       </div>
+      <br>
       <div class="row" *ngIf="this.btnPracticar"> 
-        <table class="table table-bordered">
+        <table class="table table-bordered table-warning">
           <thead>
-            <tr>
-              <th>tabla</th>
-              <th>Resultado</th>
-            </tr>
           </thead>
-          <tbody *ngFor="let x of tablaCero" >
-            <tr>
-              <td>0 X {{x}}</td>
+          <tbody *ngFor="let x of tablaResultados; let i=index">
+            <tr *ngIf="i>0">
+              <td>0 X {{i}} = </td>
+              <td *ngIf="i==1" >
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              </td>
+              <td *ngIf="i==2">
+                <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+              <td *ngIf="i==3">
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+              <td *ngIf="i==4">
+                <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+              <td *ngIf="i==5">
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+                <button style="border-radius: 50%;"(click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              </td>
+              <td *ngIf="i==6">
+                <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+              <td *ngIf="i==7">
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+              <td *ngIf="i==8">
+                <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+                <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              </td>
+              <td *ngIf="i==9">
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+                <button style="border-radius: 50%;" (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+              </td>
+              <td *ngIf="i==10">
+                <button (click)="onSubmitReactive(1,i)" class="form-group col-md-2">{{x.boton1}}</button>
+                <button (click)="onSubmitReactive(3,i)" class="form-group col-md-2">{{x.resul}}</button>
+                <button (click)="onSubmitReactive(2,i)" class="form-group col-md-2">{{x.boton2}}</button>
+              </td>
+
+              <!--Columna de resultados-->
+              <td *ngIf="i==1">
+                <label *ngIf="this.Bien1"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal1"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==2">
+                <label *ngIf="this.Bien2"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal2"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==3">
+                <label *ngIf="this.Bien3"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal3"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==4">
+                <label *ngIf="this.Bien4"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal4"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==5">
+                <label *ngIf="this.Bien5"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal5"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==6">
+                <label *ngIf="this.Bien6"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal6"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==7">
+                <label *ngIf="this.Bien7"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal7"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==8">
+                <label *ngIf="this.Bien8"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal8"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==9">
+                <label *ngIf="this.Bien9"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal9"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
+              <td *ngIf="i==10">
+                <label *ngIf="this.Bien10"><i class="fa fa-check" aria-hidden="true"></i></label>
+                <label *ngIf="this.Mal10"><i class="fa fa-times" aria-hidden="true"></i></label>
+              </td>
             </tr>
             <tr>
           </tbody>
@@ -53,9 +148,6 @@
           
       </div>
       <div class="row" *ngIf="this.btnPracticar"> 
-        <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
-        </div>
         
           
       </div>
