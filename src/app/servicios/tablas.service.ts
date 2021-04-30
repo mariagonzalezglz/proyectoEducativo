@@ -88,6 +88,12 @@ export class TablasService{
           }
           
       ];
+
+      private plano:Planoejercicios[]=[
+        {nombre:"Ejercicio 1",
+        respuesta:"-4,3",
+        planoimg:"assets/img/eje1.png"
+        }];
     constructor(){
         console.log("Servicio listo!!");
     }
@@ -97,6 +103,11 @@ export class TablasService{
     getTablas():Tablas[]{
       console.log(this.tablas);
         return this.tablas;
+       
+    }
+    getPlanos():Planoejercicios[]{
+     
+        return this.plano;
        
     }
 
@@ -127,6 +138,12 @@ export interface Tablas{
     img:string;
     aparicion:string;
     casa:string;
+  }
+
+  export interface Planoejercicios{
+    nombre:string;
+    respuesta:string;
+    planoimg:string;
   }
 
  

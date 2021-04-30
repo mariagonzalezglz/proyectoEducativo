@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild, ElementRef } from '@angular/core';
-
+import {TablasService,Tablas, Planoejercicios} from '../../servicios/tablas.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-plano',
@@ -8,9 +9,13 @@ import { Component, OnInit,ViewChild, ElementRef } from '@angular/core';
 })
 export class PlanoComponent implements OnInit {
 
-  constructor() { }
+  planos:Planoejercicios[]=[];
+  constructor(private _tablasService:TablasService,
+               private _router:Router) { }
 
-  ngOnInit(): void {
+ ngOnInit(){
+this.planos=this._tablasService.getPlanos();
+console.log(this.planos);
   }
 
 
@@ -23,36 +28,6 @@ export class PlanoComponent implements OnInit {
     this.videoplayer.nativeElement.play();
     var myVideo: any = document.getElementById("my_video_1");
     myVideo.width = 320;
-  }
-  playPause() {
-    var myVideo: any = document.getElementById("my_video_1");
-    if (myVideo.paused) myVideo.play();
-    else myVideo.pause();
-  }
-
-  makeBig() {
-    var myVideo: any = document.getElementById("my_video_1");
-    myVideo.width = 560;
-  }
-
-  makeSmall() {
-    var myVideo: any = document.getElementById("my_video_1");
-    myVideo.width = 320;
-  }
-
-  makeNormal() {
-    var myVideo: any = document.getElementById("my_video_1");
-    myVideo.width = 420;
-  }
-
-  skip(value) {
-    let video: any = document.getElementById("my_video_1");
-    video.currentTime += value;
-  }
-
-  restart() {
-    let video: any = document.getElementById("my_video_1");
-    video.currentTime = 0;
   }
 }
 
