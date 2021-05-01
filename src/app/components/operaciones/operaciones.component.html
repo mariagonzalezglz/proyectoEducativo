@@ -1,1 +1,88 @@
 <h1>Multiplicaciones</h1>
+
+<div class="row">
+    <div class="col" style="background-color: #fbc9ea">
+        partes de la multiplicacion
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2" style="background-color: #FBEDC9">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Nivel básico</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nivel intermedio</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Nivel avanzado </a>
+          </div>
+    </div>
+    <div class="col-10" style="background-color: #F8DDA9;">
+
+      <div class="row">
+        <div class="col-8">
+              
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Ejercicios de un digito
+                        </div>
+                        <div class="card-body">
+                            <!--Multiplicando-->
+                            <div>
+                                <span>{{this.multiplicando}}</span>
+                            </div>
+                            <!--Multiplicador-->
+                            <div>
+                                <span id="oper"> X </span>
+                                <span>{{this.multiplicador}}</span>
+                            </div>
+                            <!--raya-->
+                            <div>
+                                <label>-----------------------------</label>
+                            </div>   
+                            <!--Resultado-->
+                            <div>
+                                <input type="text" [(ngModel)]="resultado" style="width: min-content; text-align: center;">
+                            </div>  
+                            <br>      
+                          <!--Boton-->
+                          <button data-toggle="modal" data-target="#miModal" (click)="validar(this.multiplicando,this.multiplicador)" type="button" class="btn btn-info btn-lg">Validar</button>
+                        </div>
+                        
+                      </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+          </div>
+
+
+          </div> <!--Cierre clase 8-->
+
+          <!--Notas-->
+          <div class="col-4">
+            
+
+          </div>
+      </div>
+
+    </div>
+</div>
+
+
+<!--Modal-->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body"  *ngIf="!this.modal">
+				<i class="fa fa-times" style="color:red" aria-hidden="true"></i> oops!, algo salio mal, revisa tu resultado
+			</div>
+            <div class="modal-body" *ngIf="this.modal">
+				<i class="fa fa-check" style="color:green" aria-hidden="true"></i> Bien hecho!, tu resultado es correcto
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 //Servicios
 import {TablasService} from './servicios/tablas.service';
@@ -49,7 +50,8 @@ import { DivisionesComponent } from './components/divisiones/divisiones.componen
   ],
   imports: [
     BrowserModule,
-    APP_ROUTE
+    APP_ROUTE,
+    FormsModule
   ],
   providers: [
     TablasService
