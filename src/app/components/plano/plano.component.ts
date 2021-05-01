@@ -57,9 +57,10 @@ this.palabra = this.getImagen();
    if(this.respu==resp){
      
     console.log("Respuesta correcta!!");
-    this.palabra = this.getImagen();
+    
     this.textodemodal="Bien hecho!, tu resultado es correcto,continua con el siguiente";
     this.modal=true;
+    this.palabra = this.getImagen();
       return "bien";
    }else{
      this.resultado="";
