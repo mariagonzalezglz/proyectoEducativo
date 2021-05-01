@@ -93,6 +93,11 @@ export class TablasService{
         {nombre:"Ejercicio 1",
         respuesta:"-4,3",
         planoimg:"assets/img/eje1.png"
+        },
+        {
+          nombre:"Ejercicio 2",
+          respuesta:"2,6",
+          planoimg:"assets/img/2,6.png"
         }];
     constructor(){
         console.log("Servicio listo!!");

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray,CdkDropList, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-tabla-cero',

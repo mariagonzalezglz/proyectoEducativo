@@ -16,25 +16,26 @@
 
   <!--Cuadricula de plano-->
 
-<div class="row" *ngFor="let plano of planos; let i=index">
+<div class="row">
     <div class="col-sm-6" style="padding-top: 200px;">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{plano.nombre}}</h5>
+            <h5 class="card-title">{{nombre}}</h5>
             <a class="card-title">Ubica en el siguiente plano cartesiano la imagen mostrada
               y coloca en el siguiente recuadro las coordenados donde se localiza, da clic en el boton
               "Validar" para revisar tu respuesta.
             </a>
             
-            <input class="form-control" type="text" placeholder="Respuesta">
-            <button type="button" class="btn btn-primary mb-2">Validar</button>
+            <input [(ngModel)]="resultado" ngModel  class="form-control"  type="text" placeholder="Respuesta">
+    
+            <button type="button" (click)="getRevResp(resultado)" class="btn btn-primary mb-2">Validar</button>
           </div>
         </div>
       </div>
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-            <img src={{plano.planoimg}} class="card-img-top" [alt]="plano.planoimg">
+            <img [src]="palabra" class="card-img-top" alt="">
         </div>
       </div>
     </div>

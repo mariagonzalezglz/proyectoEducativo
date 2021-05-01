@@ -8,14 +8,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./plano.component.scss']
 })
 export class PlanoComponent implements OnInit {
-
+  aleato:Number;
+  palabra:String; 
+  nombre:String;
+  respu:String;
+  resultado="";
   planos:Planoejercicios[]=[];
   constructor(private _tablasService:TablasService,
-               private _router:Router) { }
+               private _router:Router) { 
+               
+               }
 
  ngOnInit(){
 this.planos=this._tablasService.getPlanos();
-console.log(this.planos);
+this.palabra = this.getImagen();
+
   }
 
 
@@ -28,6 +35,29 @@ console.log(this.planos);
     this.videoplayer.nativeElement.play();
     var myVideo: any = document.getElementById("my_video_1");
     myVideo.width = 320;
+  }
+   getImagen() {   
+     //Math.floor(Math.random() * (this.planos.length - 1)) + 0
+     //Math.floor(Math.random() * (this.planos.length-1));
+     console.log("cuantos hay:"+this.planos.length);
+     const randomNum = Math.floor(Math.random() * this.planos.length);
+    console.log("Aleatorio generado:"+randomNum);
+  this.respu=this.planos[randomNum].respuesta;
+    this.nombre=this.planos[randomNum].nombre; 
+    return this.planos[randomNum].planoimg;
+  }
+
+  getRevResp(resp){
+    console.log(this.respu+"    "+resp);
+   if(this.respu==resp){
+     
+    console.log("Respuesta correcta!!");
+      return "bien";
+   }else{
+
+    console.log("Respuesta Incorrecta!!");
+return "mal";
+   }
   }
 }
 
