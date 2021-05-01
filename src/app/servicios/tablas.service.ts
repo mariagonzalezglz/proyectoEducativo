@@ -90,14 +90,47 @@ export class TablasService{
       ];
 
       private plano:Planoejercicios[]=[
-        {nombre:"Ejercicio 1",
+        {nombre:"Encuentra el Arbol",
         respuesta:"-4,3",
         planoimg:"assets/img/eje1.png"
         },
         {
-          nombre:"Ejercicio 2",
+          nombre:"Encuentra el Circulo",
           respuesta:"2,6",
           planoimg:"assets/img/2,6.png"
+        },
+        {
+          nombre:"Encuentra el Flor",
+          respuesta:"-2,-2",
+          planoimg:"assets/img/-2,-2.png"
+        },{
+          nombre:"Encuentra el Ciervo",
+          respuesta:"-2,5",
+          planoimg:"assets/img/-2,5.png"
+        },{
+          nombre:"Encuentra el Flor",
+          respuesta:"-4,2",
+          planoimg:"assets/img/-4,2.png"
+        },{
+          nombre:"Encuentra el Rectangulo",
+          respuesta:"1,1",
+          planoimg:"assets/img/1,1.png"
+        },{
+          nombre:"Encuentra el Barco",
+          respuesta:"3,-4",
+          planoimg:"assets/img/3,-4.png"
+        },{
+          nombre:"Encuentra el Palmera",
+          respuesta:"4,1",
+          planoimg:"assets/img/4,1.png"
+        },{
+          nombre:"Encuentra el Submarino",
+          respuesta:"5,3",
+          planoimg:"assets/img/5,3png"
+        },{
+          nombre:"Encuentra el Pentagono",
+          respuesta:"6,-5",
+          planoimg:"assets/img/6,-5.png"
         }];
     constructor(){
         console.log("Servicio listo!!");

@@ -13,6 +13,8 @@ export class PlanoComponent implements OnInit {
   nombre:String;
   respu:String;
   resultado="";
+  textodemodal="";
+  modal:boolean=false;
   planos:Planoejercicios[]=[];
   constructor(private _tablasService:TablasService,
                private _router:Router) { 
@@ -49,15 +51,23 @@ this.palabra = this.getImagen();
 
   getRevResp(resp){
     console.log(this.respu+"    "+resp);
+    if(resp==""){
+        this.textodemodal="Porfavor, no dejes vacia tu respuesta.";
+    }else{
    if(this.respu==resp){
      
     console.log("Respuesta correcta!!");
+    this.palabra = this.getImagen();
+    this.textodemodal="Bien hecho!, tu resultado es correcto,continua con el siguiente";
+    this.modal=true;
       return "bien";
    }else{
-
-    console.log("Respuesta Incorrecta!!");
+     this.resultado="";
+     this.textodemodal="oops!, algo salio mal, revisa tu resultado";
+    console.log("Respuesta Incorrecta!! ");
 return "mal";
    }
+  }
   }
 }
 
