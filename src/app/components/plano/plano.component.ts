@@ -61,6 +61,7 @@ this.palabra = this.getImagen();
     this.textodemodal="Bien hecho!, tu resultado es correcto,continua con el siguiente";
     this.modal=true;
     this.palabra = this.getImagen();
+    this.resultado="";
       return "bien";
    }else{
      this.resultado="";
