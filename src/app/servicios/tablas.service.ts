@@ -126,7 +126,7 @@ export class TablasService{
         },{
           nombre:"Encuentra el Submarino",
           respuesta:"5,3",
-          planoimg:"assets/img/5,3png"
+          planoimg:"assets/img/5,3.png"
         },{
           nombre:"Encuentra el Pentagono",
           respuesta:"6,-5",
