@@ -90,21 +90,21 @@ export class TablasService{
       ];
 
       private plano:Planoejercicios[]=[
-        {nombre:"Encuentra el Triangulo",
+        {nombre:"Encuentra el Triángulo",
         respuesta:"-4,3",
         planoimg:"assets/img/eje1.png"
         },
-        {nombre:"Encuentra el Arbol",
+        {nombre:"Encuentra el Árbol",
         respuesta:"-4,3",
         planoimg:"assets/img/-4,3.png"
         },
         {
-          nombre:"Encuentra el Circulo",
+          nombre:"Encuentra el Círculo",
           respuesta:"2,6",
           planoimg:"assets/img/2,6.png"
         },
         {
-          nombre:"Encuentra el Flor",
+          nombre:"Encuentra la Flor",
           respuesta:"-2,-2",
           planoimg:"assets/img/-2,-2.png"
         },{
@@ -112,11 +112,11 @@ export class TablasService{
           respuesta:"-2,5",
           planoimg:"assets/img/-2,5.png"
         },{
-          nombre:"Encuentra el Flor",
+          nombre:"Encuentra la Flor",
           respuesta:"-4,2",
           planoimg:"assets/img/-4,2.png"
         },{
-          nombre:"Encuentra el Rectangulo",
+          nombre:"Encuentra el Rectángulo",
           respuesta:"1,1",
           planoimg:"assets/img/1,1.png"
         },{
@@ -124,7 +124,7 @@ export class TablasService{
           respuesta:"3,-4",
           planoimg:"assets/img/3,-4.png"
         },{
-          nombre:"Encuentra el Palmera",
+          nombre:"Encuentra la Palmera",
           respuesta:"4,1",
           planoimg:"assets/img/4,1.png"
         },{
@@ -132,18 +132,18 @@ export class TablasService{
           respuesta:"5,3",
           planoimg:"assets/img/5,3.png"
         },{
-          nombre:"Encuentra el Pentagono",
+          nombre:"Encuentra el Pentágono",
           respuesta:"6,-5",
           planoimg:"assets/img/6,-5.png"
         }];
     constructor(){
-        console.log("Servicio listo!!");
+        //console.log("Servicio listo!!");
     }
 
     //hacer un servicio publico para ontener datos de arriba
 
     getTablas():Tablas[]{
-      console.log(this.tablas);
+      //console.log(this.tablas);
         return this.tablas;
        
     }

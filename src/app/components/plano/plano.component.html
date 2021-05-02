@@ -2,34 +2,47 @@
 <h1>Plano cartesiano</h1>
 
 
-<div id="instructions">
-	<video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px" controls preload="none"
+<div class="row">
+  <div class="col-md-auto">
+    <div class="col-md-auto">
+      <img style="width:100%;max-width:300px" src="assets/img/plano.jpg">
+      <br>
+  </div>
 
-		data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-		<source src="assets/video/plano.mp4" type='video/mp4' />
-	</video>
+  </div>
+
+  <div class="col-lg-2">
+    <div id="instructions">
+      <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px" controls preload="none"
+    
+        data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+        <source src="assets/video/plano.mp4" type='video/mp4' />
+      </video>
+    </div>
+  </div>
 </div>
 
-  <!--Cuadricula de plano-->
 
+  <!--Cuadricula de plano-->
 <div class="row">
-    <div class="col-sm-6" style="padding-top: 200px;">
+    <div class="col-sm-6" >
+      <br><br>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{nombre}}</h5>
-            <p class="badge-pill badge-warning" style="font-size: 20px; text-align: justify;
+            <h2 class="card-title">{{nombre}}</h2>
+            <p class="badge-pill badge-warning" style="font-size: 16pt; text-align: justify;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             Ubica en el siguiente plano cartesiano la figura mostrada
-            y coloca en el siguiente recuadro las coordenados donde 
-            se localiza, da clic en el boton
+            y coloca en el recuadro las coordenados donde 
+            se localiza, da clic en el botón
             "Validar" para revisar tu respuesta.
           </p>
     
-            <p class="badge-pill  badge-warning" style="font-size: 20px; text-align: center;
+            <p class="badge-pill  badge-info" style="font-size: 16pt; text-align: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             Para agregar tu respuesta, coloca en primer lugar la 
-            coordenada del eje de las X,separado con una coma(,)
-            despues la coordenada del eje de la Y, Ejemplo: 5,7
+            coordenada del eje de las X, separado con una coma(,)
+            después la coordenada del eje de la Y, Ejemplo: 5,7
         </p>
             
             <input [(ngModel)]="resultado" ngModel  class="form-control"  type="text" placeholder="Respuesta" require>
@@ -39,6 +52,7 @@
         </div>
       </div>
     <div class="col-sm-6">
+      <br><br>
       <div class="card">
         <div class="card-body">
             <img [src]="palabra" class="card-img-top" alt="">

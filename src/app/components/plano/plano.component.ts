@@ -41,24 +41,20 @@ this.palabra = this.getImagen();
    getImagen() {   
      //Math.floor(Math.random() * (this.planos.length - 1)) + 0
      //Math.floor(Math.random() * (this.planos.length-1));
-     console.log("cuantos hay:"+this.planos.length);
      const randomNum = Math.floor(Math.random() * this.planos.length);
-    console.log("Aleatorio generado:"+randomNum);
   this.respu=this.planos[randomNum].respuesta;
     this.nombre=this.planos[randomNum].nombre; 
     return this.planos[randomNum].planoimg;
   }
 
   getRevResp(resp){
-    console.log(this.respu+"    "+resp);
     if(resp==""){
-        this.textodemodal="Porfavor, no dejes vacia tu respuesta.";
+        this.textodemodal="Por favor, no dejes vacía tu respuesta.";
     }else{
    if(this.respu==resp){
      
-    console.log("Respuesta correcta!!");
     
-    this.textodemodal="Bien hecho!, tu resultado es correcto,continua con el siguiente";
+    this.textodemodal="¡Bien hecho!, tu resultado es correcto,continua con el siguiente";
     this.modal=true;
     this.palabra = this.getImagen();
     this.resultado="";
@@ -66,8 +62,7 @@ this.palabra = this.getImagen();
    }else{
     this.modal=false;
      this.resultado="";
-     this.textodemodal="oops!, algo salio mal, revisa tu resultado";
-    console.log("Respuesta Incorrecta!! ");
+     this.textodemodal="¡ups!, algo salio mal, revisa tu resultado";
 return "mal";
    }
   }

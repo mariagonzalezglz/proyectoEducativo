@@ -115,7 +115,7 @@ export class OperacionesComponent implements OnInit {
      let resultado=mult*multd;
      var r=resultado.toFixed(2);
 
-     if(parseFloat(r)==parseFloat(this.resultado))
+     if(parseFloat(r)==parseFloat(this.resultado.trim()))
      {
           this.resultado="";
           this.modal=true;
@@ -139,7 +139,7 @@ export class OperacionesComponent implements OnInit {
      let resultado=mult*multd;
      var r=resultado.toFixed(3);
    
-     if(parseFloat(r)==parseFloat(this.resultadoInter))
+     if(parseFloat(r)==parseFloat(this.resultadoInter.trim()))
      {
           this.resultadoInter="";
           this.modal=true;
@@ -162,8 +162,7 @@ export class OperacionesComponent implements OnInit {
     //Variable para almacenar el resultado correcto
      let resultado=mult*multd;
      var r=resultado.toFixed(4);
-    console.log(resultado,r,this.resultadoAvan);
-     if(parseFloat(r)==parseFloat(this.resultadoAvan))
+     if(parseFloat(r)==parseFloat(this.resultadoAvan.trim()))
      {
           this.resultadoAvan="";
           this.modal=true;
