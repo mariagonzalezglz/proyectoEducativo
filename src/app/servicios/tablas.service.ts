@@ -90,9 +90,13 @@ export class TablasService{
       ];
 
       private plano:Planoejercicios[]=[
-        {nombre:"Encuentra el Arbol",
+        {nombre:"Encuentra el Triangulo",
         respuesta:"-4,3",
         planoimg:"assets/img/eje1.png"
+        },
+        {nombre:"Encuentra el Arbol",
+        respuesta:"-4,3",
+        planoimg:"assets/img/-4,3.png"
         },
         {
           nombre:"Encuentra el Circulo",
