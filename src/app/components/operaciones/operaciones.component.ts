@@ -9,8 +9,22 @@ export class OperacionesComponent implements OnInit {
 
   multiplicador:number;
   multiplicando:number;
+
+  multiplicadorInter:number;
+  multiplicandoInter:number;
+
+  
+  multiplicadorAvan:number;
+  multiplicandoAvan:number;
+
+
   resultado:"";
+  resultadoInter="";
+  resultadoAvan="";
+
+
    modal:boolean=false;
+   modalTablas:boolean=false;
    frase:string;
    icono:string;
    color:string;
@@ -18,37 +32,155 @@ export class OperacionesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.getMultiplicando();
-    this.getMultiplicador();
+    //Metodos para el nivel basico
+    this.getMultiplicandoBasico();
+    this.getMultiplicadorBasico();
+
+    //Metodos para el nivel inter
+    this.getMultiplicandoInter();
+    this.getMultiplicadorInter();
+
+    //Metodos para el nivel avan
+    this.getMultiplicandoAvan();
+    this.getMultiplicadorAvan();
   }
 
   //Generar multiplicando
-   getMultiplicando()
+   getMultiplicandoBasico()
    {
-      this.multiplicando=Math.round(Math.random()*100);
+
+    var precision = Math.pow(10, 1);
+    var minimo = 10*precision;
+    var maximo = 100*precision;
+    this.multiplicando= Math.floor(Math.random()*(maximo-minimo+1) + minimo) / precision;
    }
 
    //Generar multiplicador
-   getMultiplicador()
+   getMultiplicadorBasico()
    {
       this.multiplicador=Math.round(Math.random()*10);
    }
 
-   //Metodo para validar el resultado
-  validar(mult:number,multd:number)
+   
+  //Generar multiplicando
+  getMultiplicandoInter()
   {
+
+   var precision = Math.pow(10, 2);
+   var minimo = 10*precision;
+   var maximo = 100*precision;
+   this.multiplicandoInter= Math.floor(Math.random()*(maximo-minimo+1) + minimo) / precision;
+  }
+
+  //Generar multiplicador
+  getMultiplicadorInter()
+  {
+    let max = 10;
+    let min = 1;
+    this.multiplicadorInter=parseFloat((Math.random() * (max - min) + min).toFixed(1));
+    /*var precision = Math.pow(10, 1);
+    var minimo = 10*precision;
+    var maximo = 100*precision;
+    this.multiplicadorInter= Math.floor(Math.random()*(maximo-minimo+1) + minimo) / precision;*/
+  }
+
+   
+  //Generar multiplicando
+  getMultiplicandoAvan()
+  {
+
+   var precision = Math.pow(10, 2);
+   var minimo = 10*precision;
+   var maximo = 100*precision;
+   this.multiplicandoAvan= Math.floor(Math.random()*(maximo-minimo+1) + minimo) / precision;
+  }
+
+  getMultiplicadorAvan()
+  {
+    let max = 10;
+    let min = 3;
+    this.multiplicadorAvan=parseFloat((Math.random() * (max - min) + min).toFixed(2));
+    /*var precision = Math.pow(10, 1);
+    var minimo = 10*precision;
+    var maximo = 100*precision;
+    this.multiplicadorInter= Math.floor(Math.random()*(maximo-minimo+1) + minimo) / precision;*/
+  }
+
+
+    
+   //Metodo para validar el resultado
+  validar(mult:number,multd:number, resul:string)
+  {
+    //Variable para almacenar el resultado correcto
      let resultado=mult*multd;
-     if(resultado==parseInt(this.resultado))
+     var r=resultado.toFixed(2);
+
+     if(parseFloat(r)==parseFloat(this.resultado))
      {
           this.resultado="";
           this.modal=true;
-          this.getMultiplicando();
-          this.getMultiplicador();
+          this.getMultiplicandoBasico();
+          this.getMultiplicadorBasico();
+
      }
      else{
-      this.resultado="";
+      //this.resultado="";
+      this.modal=false
      }
     
   }
+
+
+  //Metodo para validar el resultado
+  validarInter(mult:number,multd:number)
+  {
+
+    //Variable para almacenar el resultado correcto
+     let resultado=mult*multd;
+     var r=resultado.toFixed(3);
+   
+     if(parseFloat(r)==parseFloat(this.resultadoInter))
+     {
+          this.resultadoInter="";
+          this.modal=true;
+          this.getMultiplicandoInter();
+          this.getMultiplicadorInter();
+     }
+     else{
+      this.modal=false;
+      //this.resultadoInter="";
+      
+     }
+    
+  }
+
+  
+  //Metodo para validar el resultado
+  validarAvan(mult:number,multd:number)
+  {
+
+    //Variable para almacenar el resultado correcto
+     let resultado=mult*multd;
+     var r=resultado.toFixed(4);
+    console.log(resultado,r,this.resultadoAvan);
+     if(parseFloat(r)==parseFloat(this.resultadoAvan))
+     {
+          this.resultadoAvan="";
+          this.modal=true;
+          this.getMultiplicandoAvan();
+          this.getMultiplicadorAvan();
+     }
+     else{
+      this.modal=false;
+      //this.resultadoAvan="";
+      
+     }
+    
+  }
+
+  verTablas(){
+    this.modalTablas=true;
+  }
+
 
 }

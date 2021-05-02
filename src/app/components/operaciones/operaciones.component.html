@@ -1,13 +1,16 @@
 <h1>Multiplicaciones</h1>
 
 <div class="row">
-    <div class="col" style="background-color: #fbc9ea">
-        partes de la multiplicacion
+    <div class="col" >
+        <img style="width:100%;max-width:300px" src="assets/img/tablas.png">
+        <br>
     </div>
 </div>
-
+<br><br>
 <div class="row">
+    
     <div class="col-2" style="background-color: #FBEDC9">
+        <br>
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Nivel básico</a>
             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nivel intermedio</a>
@@ -15,57 +18,180 @@
           </div>
     </div>
     <div class="col-10" style="background-color: #F8DDA9;">
-
       <div class="row">
         <div class="col-8">
-              
-        <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <br>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Ejercicios de un decimal
+                            </div>
+                            <div class="card-body">
+                                <!--Multiplicando-->
+                                <div>
+                                    <span>{{this.multiplicando}}</span>
+                                </div>
+                                <!--Multiplicador-->
+                                <div>
+                                    <span id="oper"> X </span>
+                                    <span>{{this.multiplicador}}</span>
+                                </div>
+                                <!--raya-->
+                                <div>
+                                    <hr style="background-color: black; width:300px;">
+                                </div>   
+                                <!--Resultado-->
+                                <div>
+                                    <input type="text" [(ngModel)]="resultado" style="width: 300px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                                </div>  
+                                <br>      
+                              <!--Boton-->
+                              <button data-toggle="modal" data-target="#miModal" (click)="validar(this.multiplicando,this.multiplicador,resultado)" type="button" class="btn btn-info btn-lg">Validar</button>
+                            </div>
+                        </div>
+                        <br>
+                </div>
+                <!--Nivel intermedio-->
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     <div class="card text-center">
                         <div class="card-header">
-                            Ejercicios de un digito
+                            Ejercicios de dos y tres decimales
                         </div>
                         <div class="card-body">
                             <!--Multiplicando-->
                             <div>
-                                <span>{{this.multiplicando}}</span>
+                                <span>{{this.multiplicandoInter}}</span>
                             </div>
                             <!--Multiplicador-->
                             <div>
                                 <span id="oper"> X </span>
-                                <span>{{this.multiplicador}}</span>
+                                <span>{{this.multiplicadorInter}}</span>
                             </div>
                             <!--raya-->
                             <div>
-                                <label>-----------------------------</label>
+                                <hr style="background-color: black; width:400px; height: 1px;">
                             </div>   
-                            <!--Resultado-->
-                            <div>
-                                <input type="text" [(ngModel)]="resultado" style="width: min-content; text-align: center;">
-                            </div>  
+                            <!--inputs de operaciones-->
+                            <div>  
+    
+                                <div class="container">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col col-lg-2">
+                                          <span id="oper">+</span>
+                                        </div>
+                                        <div class="col-md-auto" style="margin-left: 0%;">
+                                            <div>
+                                                <div class="form-row">
+                                                    <div class="col-10">
+                                                    <input  type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-10">
+                                                    <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <!--Raya-->
+                                <hr style="background-color: black; width:450px; height:2px;">
+                                <!--Input de resultado-->
+                                <div class="form-row justify-content-center aling-items-center">
+                                    <div class="form-group col-md-8" style="padding-left: 10%; padding-right: 0%;">
+                                        <input style="font-size: large; color: darkgreen; font-weight: bold; text-align: center;" [(ngModel)]="resultadoInter" type="text" class="form-control">
+                                    </div>
+                                </div>
+    
+                            </div>  <!--Cierre div resultado-->
                             <br>      
                           <!--Boton-->
-                          <button data-toggle="modal" data-target="#miModal" (click)="validar(this.multiplicando,this.multiplicador)" type="button" class="btn btn-info btn-lg">Validar</button>
+                          <button data-toggle="modal" data-target="#miModal" (click)="validarInter(this.multiplicandoInter,this.multiplicadorInter)" type="button" class="btn btn-info btn-lg">Validar</button>
                         </div>
-                        
                       </div>
+                </div>
+                <br>
+              </div>
+    
+              <!--Nivel avanzado-->
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Ejercicios de cuatro decimales
+                    </div>
+                    <div class="card-body">
+                        <!--Multiplicando-->
+                        <div>
+                            <span>{{this.multiplicandoAvan}}</span>
+                        </div>
+                        <!--Multiplicador-->
+                        <div>
+                            <span id="oper"> X </span>
+                            <span>{{this.multiplicadorAvan}}</span>
+                        </div>
+                        <!--raya-->
+                        <div>
+                            <hr style="background-color: black; width:400px; height: 1px;">
+                        </div>   
+                        <!--inputs de operaciones-->
+                        <div>  
+    
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="col col-lg-2">
+                                      <span id="oper">+</span>
+                                    </div>
+                                    <div class="col-md-auto" style="margin-left: 0%;">
+                                        <div>
+                                            <div class="form-row">
+                                                <div class="col-10">
+                                                <input  type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-10">
+                                                <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-10">
+                                                <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                            </div>
+                            <!--Raya-->
+                            <hr style="background-color: black; width:450px; height:2px;">
+                            <!--Input de resultado-->
+                            <div class="form-row justify-content-center aling-items-center">
+                                <div class="form-group col-md-8" style="padding-left: 10%; padding-right: 0%;">
+                                    <input style="font-size: large; color: darkgreen; font-weight: bold; text-align: center;" [(ngModel)]="resultadoAvan" type="text" class="form-control">
+                                </div>
+                            </div>
+    
+                        </div>  <!--Cierre div resultado-->
+                        <br>      
+                      <!--Boton-->
+                      <button data-toggle="modal" data-target="#miModal" (click)="validarAvan(this.multiplicandoAvan,this.multiplicadorAvan)" type="button" class="btn btn-info btn-lg">Validar</button>
+                    </div>
+                  </div>
+                 
             </div>
-            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+            </div> <br>
+        </div> <!--Columna8-->
+      </div> <!--row-->
+      <div class="col-4"><!--Notas-->
+        <br>
+        <button data-toggle="modal" data-target="#modalTablas" (click)="verTablas()" type="button" class="btn-lg" style="background-color: #F39C12; color: white;"><strong>Vista rapida de tablas</strong> </button>
+        <div class="form-group">
+             <strong>¡Que no se te olvide nada!, este espacio es para tus notas. </strong> 
+            <textarea class="form-control" rows="10"></textarea>
           </div>
-
-
-          </div> <!--Cierre clase 8-->
-
-          <!--Notas-->
-          <div class="col-4">
-            
-
-          </div>
-      </div>
-
     </div>
-</div>
+    </div> <!--class="col-10"-->
+</div> <!--DIV ROW PRINCIPAL-->
 
 
 <!--Modal-->
@@ -78,11 +204,30 @@
 				</button>
 			</div>
 			<div class="modal-body"  *ngIf="!this.modal">
-				<i class="fa fa-times" style="color:red" aria-hidden="true"></i> oops!, algo salio mal, revisa tu resultado
+				<i class="fa fa-times" style="color:red" aria-hidden="true"></i> ¡Ups!, algo salio mal, revisa tu resultado
 			</div>
             <div class="modal-body" *ngIf="this.modal">
 				<i class="fa fa-check" style="color:green" aria-hidden="true"></i> Bien hecho!, tu resultado es correcto
 			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--Modal-->
+<div class="modal fade" id="modalTablas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+                <label> Tablas de multiplicar</label> 
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" *ngIf="this.modalTablas">
+                <img style="width:100%;max-width:500px" src="assets/img/tablas.png">
+			</div> 
 		</div>
 	</div>
 </div>
