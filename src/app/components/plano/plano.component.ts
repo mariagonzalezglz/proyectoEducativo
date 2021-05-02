@@ -64,6 +64,7 @@ this.palabra = this.getImagen();
     this.resultado="";
       return "bien";
    }else{
+    this.modal=false;
      this.resultado="";
      this.textodemodal="oops!, algo salio mal, revisa tu resultado";
     console.log("Respuesta Incorrecta!! ");
