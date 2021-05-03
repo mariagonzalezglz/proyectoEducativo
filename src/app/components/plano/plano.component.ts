@@ -54,7 +54,7 @@ this.palabra = this.getImagen();
    if(this.respu==resp){
      
     
-    this.textodemodal="¡Bien hecho!, tu resultado es correcto,continua con el siguiente";
+    this.textodemodal="¡Bien hecho!, tu resultado es correcto,continúa con el siguiente.";
     this.modal=true;
     this.palabra = this.getImagen();
     this.resultado="";
@@ -62,7 +62,7 @@ this.palabra = this.getImagen();
    }else{
     this.modal=false;
      this.resultado="";
-     this.textodemodal="¡ups!, algo salio mal, revisa tu resultado";
+     this.textodemodal="¡ups!, algo salió mal, revisa tu resultado.";
 return "mal";
    }
   }
