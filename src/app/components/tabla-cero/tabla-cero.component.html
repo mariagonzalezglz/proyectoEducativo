@@ -2,8 +2,16 @@
 
 <h2>Tabla de multiplicar del 0</h2>
 <br><br>
+<div class="row col-7">
+  <button type="button" class="btn btn-light" (click)="reproducir()" *ngIf="this.reprod">
+    <i class="fa fa-volume-down" aria-hidden="true"></i>
+  </button>
 
-<div class="container">
+  <button type="button" class="btn btn-light" (click)="pausarMet()" *ngIf="this.pausar">
+    <i class="fa fa-pause-circle" aria-hidden="true"></i>
+  </button>
+</div>
+
   <div class="row">
     <div class="col-7" *ngIf="this.tablas">
         <body class="justify-content-center aling-items-center" *ngIf="this.tablas">
@@ -147,14 +155,12 @@
         </table>
           
       </div>
-      <div class="row" *ngIf="this.btnPracticar"> 
-        
-          
+      <div class="row" *ngIf="this.btnPracticar">   
       </div>
 
     </div>
   </div>
-</div>
+
 
 
 

@@ -1,6 +1,16 @@
 
 <h2>Tabla de multiplicar del 7</h2>
 <br><br>
+<div class="row col-6">
+  <button type="button" class="btn btn-light" (click)="reproducir()" *ngIf="this.reprod">
+    <i class="fa fa-volume-down" aria-hidden="true"></i>
+  </button>
+
+  <button type="button" class="btn btn-light" (click)="pausarMet()" *ngIf="this.pausar">
+    <i class="fa fa-pause-circle" aria-hidden="true"></i>
+  </button>
+</div>
+
 
 <div class="row">
   <div class="col-6" *ngIf="this.tablas">

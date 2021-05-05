@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -32,6 +33,9 @@ export class TablaUnoComponent implements OnInit {
   Mal9:boolean=false;
   Bien10:boolean=false;
   Mal10:boolean=false;
+  audio = new Audio('assets/audios/tabla1.mp4');
+  pausar:boolean=false;
+  reprod:boolean=true;
 
 
   constructor() { }
@@ -151,6 +155,25 @@ export class TablaUnoComponent implements OnInit {
     }
 
   }
+
+  ngOnDestroy() {
+    this.audio.pause();
+  }
+
+  reproducir() 
+  {
+    this.audio.load();
+    this.audio.play();
+    this.pausar=true;
+    this.reprod=false;
+  }
+
+pausarMet(){
+  this.audio.pause();
+  this.reprod=true;
+  this.pausar=false;
+
+}
 
   //Metodo para ocultar/mostrar el panel de tablas
   practicar()

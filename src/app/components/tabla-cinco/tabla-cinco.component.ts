@@ -33,6 +33,9 @@ export class TablaCincoComponent implements OnInit {
   Mal9:boolean=false;
   Bien10:boolean=false;
   Mal10:boolean=false;
+  audio = new Audio('assets/audios/tabla5.mp4');
+  pausar:boolean=false;
+  reprod:boolean=true;
 
   constructor() { }
 
@@ -56,6 +59,25 @@ export class TablaCincoComponent implements OnInit {
       }
     }, 16);
   }
+
+  ngOnDestroy() {
+    this.audio.pause();
+  }
+
+  reproducir() 
+  {
+    this.audio.load();
+    this.audio.play();
+    this.pausar=true;
+    this.reprod=false;
+  }
+
+pausarMet(){
+  this.audio.pause();
+  this.reprod=true;
+  this.pausar=false;
+
+}
 
 
   //Metodo para ver que boton se presiono
