@@ -38,6 +38,11 @@
                                 Ejercicios de un decimal
                             </div>
                             <div class="card-body">
+                                <!--Las que llevas-->
+                                <div class="form-row" style="margin-left: 43%;">
+                                    <input [(ngModel)]="llevo1"  type="text" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                                    <input [(ngModel)]="llevo2"  type="text" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                                </div>
                                 <!--Multiplicando-->
                                 <div>
                                     <span>{{this.multiplicando}}</span>
@@ -69,6 +74,12 @@
                             Ejercicios de dos y tres decimales
                         </div>
                         <div class="card-body">
+                            <!--Las que llevas-->
+                            <div class="form-row" style="margin-left: 40%;">
+                                <input [(ngModel)]="llevo1" type="text" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                                <input [(ngModel)]="llevo2" type="text" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                                <input [(ngModel)]="llevo3" type="text" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                            </div>
                             <!--Multiplicando-->
                             <div>
                                 <span>{{this.multiplicandoInter}}</span>
@@ -94,12 +105,12 @@
                                             <div>
                                                 <div class="form-row">
                                                     <div class="col-10">
-                                                    <input  type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                    <input [(ngModel)]="suma1"  type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col-10">
-                                                    <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                    <input [(ngModel)]="suma2" type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
                                                     </div>
                                                 </div>
                                         </div>
@@ -131,6 +142,12 @@
                         Ejercicios de cuatro decimales
                     </div>
                     <div class="card-body">
+                        <!--Las que llevas-->
+                        <div class="form-row" style="margin-left: 40%;">
+                            <input type="text" [(ngModel)]="llevo1" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                            <input type="text" [(ngModel)]="llevo2" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                            <input type="text" [(ngModel)]="llevo3" style="width: 30px; font-size: large; color: darkgreen; font-weight: bold; text-align: center;">
+                        </div>
                         <!--Multiplicando-->
                         <div>
                             <span>{{this.multiplicandoAvan}}</span>
@@ -156,17 +173,17 @@
                                         <div>
                                             <div class="form-row">
                                                 <div class="col-10">
-                                                <input  type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                <input  type="text" [(ngModel)]="suma1" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-10">
-                                                <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                <input type="text" [(ngModel)]="suma2" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-10">
-                                                <input type="text" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
+                                                <input type="text" [(ngModel)]="suma3" class="form-control" style="width: 300px; font-size: large; color: grey; font-weight: bold; text-align: center;">
                                                 </div>
                                             </div>
                                     </div>

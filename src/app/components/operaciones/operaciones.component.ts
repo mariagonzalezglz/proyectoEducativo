@@ -22,6 +22,15 @@ export class OperacionesComponent implements OnInit {
   resultadoInter="";
   resultadoAvan="";
 
+  llevo1:"";
+  llevo2:"";
+  llevo3:"";
+
+  
+  suma1:"";
+  suma2:"";
+  suma3:"";
+
 
    modal:boolean=false;
    modalTablas:boolean=false;
@@ -118,6 +127,8 @@ export class OperacionesComponent implements OnInit {
      if(parseFloat(r)==parseFloat(this.resultado.trim()))
      {
           this.resultado="";
+          this.llevo1="";
+          this.llevo2="";
           this.modal=true;
           this.getMultiplicandoBasico();
           this.getMultiplicadorBasico();
@@ -142,6 +153,11 @@ export class OperacionesComponent implements OnInit {
      if(parseFloat(r)==parseFloat(this.resultadoInter.trim()))
      {
           this.resultadoInter="";
+          this.llevo1="";
+          this.llevo2="";
+          this.llevo3="";
+          this.suma1="";
+          this.suma2="";
           this.modal=true;
           this.getMultiplicandoInter();
           this.getMultiplicadorInter();
@@ -165,6 +181,12 @@ export class OperacionesComponent implements OnInit {
      if(parseFloat(r)==parseFloat(this.resultadoAvan.trim()))
      {
           this.resultadoAvan="";
+          this.llevo1="";
+          this.llevo2="";
+          this.llevo3="";
+          this.suma1="";
+          this.suma2="";
+          this.suma3="";
           this.modal=true;
           this.getMultiplicandoAvan();
           this.getMultiplicadorAvan();
