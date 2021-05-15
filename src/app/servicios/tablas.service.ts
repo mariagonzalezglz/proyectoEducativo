@@ -125,8 +125,8 @@ export class TablasService{
           planoimg:"assets/img/3,-4.png"
         },{
           nombre:"Encuentra la Palmera",
-          respuesta:"4,1",
-          planoimg:"assets/img/4,1.png"
+          respuesta:"1,4",
+          planoimg:"assets/img/1,4.png"
         },{
           nombre:"Encuentra el Submarino",
           respuesta:"5,3",
